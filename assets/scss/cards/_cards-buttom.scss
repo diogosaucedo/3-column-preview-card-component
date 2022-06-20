@@ -1,0 +1,28 @@
+@use "../colors";
+@use "../members";
+
+@mixin properties {
+  &__item-button {
+    @include members.custom-layout(row, center, center);
+
+    width: 12rem;
+    height: 3.6rem;
+    border-radius: 2rem;
+
+    background-color: colors.$very-light-gray;
+    @include members.custom-font(1.35rem, 400, black);
+    text-decoration: none;
+  }
+
+  &__item-button-1 {
+    color: colors.$bright-orange;
+  }
+
+  &__item-button-2 {
+    color: colors.$dark-cyan;
+  }
+
+  &__item-button-3 {
+    color: colors.$very-dark-cyan;
+  }
+}

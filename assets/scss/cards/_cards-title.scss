@@ -1,0 +1,11 @@
+@use "../colors";
+@use "../members";
+@mixin properties {
+  &__item-title {
+    padding-top: 3rem;
+
+    @include members.custom-font(3.6rem, 700, colors.$very-light-gray);
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+  }
+}

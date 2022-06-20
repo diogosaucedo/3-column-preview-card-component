@@ -1,0 +1,10 @@
+@use "../colors";
+@use "../members";
+@mixin properties {
+  &__item-description {
+    padding: 3rem 0 6rem 0;
+
+    @include members.custom-font(1.35rem, 400, colors.$very-light-gray);
+    line-height: 2.4rem;
+  }
+}

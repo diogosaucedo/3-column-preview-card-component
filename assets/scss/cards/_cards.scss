@@ -1,0 +1,49 @@
+@use "../colors";
+@use "../members";
+
+@use "cards-icon";
+@use "cards-title";
+@use "cards-description";
+@use "cards-buttom";
+
+.c-cards {
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 840px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    @include members.custom-layout(column, start, flex-start);
+
+    padding: 4.5rem;
+    width: 28rem;
+  }
+
+  &__item-1 {
+    border-radius: 1rem 0 0 1rem;
+    @media (max-width: 840px) {
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    background: colors.$bright-orange;
+  }
+
+  &__item-2 {
+    background: colors.$dark-cyan;
+  }
+
+  &__item-3 {
+    border-radius: 0 1rem 1rem 0;
+    @media (max-width: 840px) {
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    background: colors.$very-dark-cyan;
+  }
+
+  @include cards-icon.properties;
+  @include cards-title.properties;
+  @include cards-description.properties;
+  @include cards-buttom.properties;
+}
